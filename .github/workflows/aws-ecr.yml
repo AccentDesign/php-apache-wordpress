@@ -43,7 +43,7 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
         
     - name: Build image 7.4, tag, and push image to Amazon ECR
-      id: build-image-7.4
+      id: build-image-7-4
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: php-apache-wordpress
@@ -57,7 +57,7 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
         
     - name: Build image 8.0, tag, and push image to Amazon ECR
-      id: build-image-8.0
+      id: build-image-8-0
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: php-apache-wordpress
